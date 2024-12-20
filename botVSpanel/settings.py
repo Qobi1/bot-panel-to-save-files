@@ -133,3 +133,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 BOT_TOKEN = os.getenv("BOT_TOKEN", None)
 DEVELOPER_CHAT_ID = 895126630
+
+SESSION_COOKIE_AGE = 60 * 15  # Automatically logs out after 15 minutes
+SESSION_SAVE_EVERY_REQUEST = True
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'dashboard'
